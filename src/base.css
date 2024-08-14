@@ -1,0 +1,49 @@
+:root {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: var(--color-tertiary);
+}
+
+*:focus-visible {
+    outline: none;
+    background-color: var(--color-tertiary);
+}
+
+h1,
+h2,
+h3,
+a,
+b,
+p,
+button {
+    font-size: 1rem;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+body {
+    padding-top: var(--header-height);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+}

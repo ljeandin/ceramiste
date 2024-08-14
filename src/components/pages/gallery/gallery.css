@@ -1,0 +1,25 @@
+.gallery {
+    padding: 0 calc(2 * var(--spacing));
+    max-width: calc(125 * var(--spacing));
+}
+
+.gallery__image {
+    display: block;
+    width: 100%;
+    margin-bottom: calc(2 * var(--spacing));
+    border-radius: var(--border-radius);
+}
+
+.gallery__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        padding: 0 calc(6 * var(--spacing));
+        column-count: 2;
+        column-gap: calc(2 * var(--spacing));
+    }
+}
