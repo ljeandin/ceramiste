@@ -27,7 +27,7 @@
                 </span>
                 <router-link
                     v-else
-                    class="menu__link"
+                    class="menu__link js-menu-link"
                     :to="item.link"
                 >
                     {{ item.title }}
@@ -39,6 +39,7 @@
                     <li
                         v-for="subItem in item.submenu"
                         :key="subItem.title"
+                        class="js-menu-link"
                     >
                         <router-link
                             class="menu__link"

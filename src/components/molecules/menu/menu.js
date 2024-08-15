@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ".js-menu-trigger"
     );
     const menu = document.querySelector(".js-menu");
+    const menuLink =
+        document.querySelectorAll(".js-menu-link");
 
     let isMenuHidden =
         menu.classList.contains("menu--hidden");
@@ -14,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 150); // Matches --transition-duration
 
         menuTrigger.classList.add("menu-trigger--open");
+
+        menuLink.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
 
         document.addEventListener(
             "click",
@@ -29,6 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 150); // Matches --transition-duration
 
         menuTrigger.classList.remove("menu-trigger--open");
+
+        menuLink.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
 
         document.removeEventListener(
             "click",

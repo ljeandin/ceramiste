@@ -70,7 +70,7 @@
 }
 
 .menu-trigger--open {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
 }
 
 .menu-trigger__icon {
