@@ -2,6 +2,13 @@
     import initImageGallery from "../../helpers/initImageGallery";
 
     const { images } = initImageGallery("accueil");
+
+    const hideTinyImage = (index) => {
+        const tinyImage = document.querySelector(
+            `.js-tiny-image-${index}`
+        );
+        tinyImage.remove();
+    };
 </script>
 
 <template>
@@ -16,10 +23,19 @@
             >
                 <img
                     :key="index"
+                    :src="image.tinySrc"
+                    :alt="image.alt"
+                    :loading="index > 0 ? 'lazy' : 'eager'"
+                    class="home-gallery__image"
+                    :class="'js-tiny-image-' + index"
+                />
+                <img
+                    :key="index"
                     :src="image.src"
                     :alt="image.alt"
                     :loading="index > 0 ? 'lazy' : 'eager'"
                     class="home-gallery__image"
+                    @load="hideTinyImage(index)"
                 />
             </a>
         </div>

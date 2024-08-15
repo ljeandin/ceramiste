@@ -7,24 +7,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0 calc(4 * var(--spacing));
 }
 
 .home-gallery__images-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: calc(90 * var(--spacing));
+    width: 100%;
 }
 
 .home-gallery__image-wrapper {
     display: flex;
     align-items: center;
     height: 100vh;
+    position: relative;
+    width: 100%;
 }
 
 .home-gallery__image-wrapper:first-child {
-    /* Add some brething room to the fist image so it looks balanced */
+    /* Add some breathing room to the fist image so it looks balanced */
     margin-top: calc(4 * var(--spacing));
 }
 
@@ -34,7 +35,13 @@
 }
 
 .home-gallery__image {
-    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: min(
+        calc(90 * var(--spacing)),
+        calc(100vw - 8 * var(--spacing))
+    );
     max-height: calc(100% - calc(20 * var(--spacing)));
     object-fit: cover;
     transition: border-radius var(--transition-duration);
