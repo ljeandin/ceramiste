@@ -18,6 +18,7 @@
                     :key="index"
                     :src="image.src"
                     :alt="image.alt"
+                    :loading="index > 0 ? 'lazy' : 'eager'"
                     class="home-gallery__image"
                 />
             </a>
