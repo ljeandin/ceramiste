@@ -37,5 +37,9 @@
     max-width: 100%;
     max-height: calc(100% - calc(20 * var(--spacing)));
     object-fit: cover;
+    transition: border-radius var(--transition-duration);
+}
+
+.home-gallery__image-wrapper .home-gallery__image:hover {
     border-radius: 50%;
 }
