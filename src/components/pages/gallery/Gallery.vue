@@ -22,6 +22,7 @@
                     :src="image.src"
                     :alt="image.alt"
                     class="gallery__image"
+                    :loading="index > 0 ? 'lazy' : 'eager'"
                 />
             </a>
         </div>
