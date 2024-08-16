@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     menuTrigger.addEventListener("click", () => {
+        navigator.vibrate(50);
         if (isMenuHidden) {
             openMenu();
         } else {
