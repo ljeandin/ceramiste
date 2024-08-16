@@ -2,13 +2,6 @@
     import initImageGallery from "../../helpers/initImageGallery";
 
     const { images } = initImageGallery("accueil");
-
-    const hideTinyImage = (index) => {
-        const tinyImage = document.querySelector(
-            `.js-tiny-image-${index}`
-        );
-        tinyImage.remove();
-    };
 </script>
 
 <template>
@@ -21,31 +14,14 @@
                 target="_blank"
                 class="home-gallery__image-container"
             >
-                <div class="home-gallery__image-wrapper">
-                    <img
-                        :key="index"
-                        :src="image.tinySrc"
-                        :alt="image.alt"
-                        :loading="
-                            index > 0 ? 'lazy' : 'eager'
-                        "
-                        class="home-gallery__image home-gallery__image--thumbnail"
-                        :class="'js-tiny-image-' + index"
-                    />
-                </div>
-
-                <div class="home-gallery__image-wrapper">
-                    <img
-                        :key="index"
-                        :src="image.src"
-                        :alt="image.alt"
-                        :loading="
-                            index > 0 ? 'lazy' : 'eager'
-                        "
-                        class="home-gallery__image"
-                        @load="hideTinyImage(index)"
-                    />
-                </div>
+                <img
+                    :key="index"
+                    :src="image.src"
+                    :data-alt="image.alt"
+                    :loading="index > 0 ? 'lazy' : 'eager'"
+                    class="home-gallery__image"
+                    :style="`background: url('${image.tinySrc}')`"
+                />
             </a>
         </div>
     </div>

@@ -23,6 +23,7 @@
                     :alt="image.alt"
                     class="gallery__image"
                     :loading="index > 0 ? 'lazy' : 'eager'"
+                    :style="`background: url('${image.tinySrc}')`"
                 />
             </a>
         </div>

@@ -36,15 +36,10 @@
     height: calc(100vh - calc(4 * var(--spacing)));
 }
 
-.home-gallery__image-wrapper {
-    overflow: hidden;
+.home-gallery__image {
     max-width: 100%;
     /* Max-height is 100% - arbitrary value that looks good */
     max-height: calc(100% - calc(20 * var(--spacing)));
-    height: 100%;
-}
-
-.home-gallery__image {
     height: 100%;
     width: 100%;
     object-fit: cover;
