@@ -17,7 +17,7 @@
             <img
                 class="header__logo"
                 src="/src/assets/icons/logo.svg"
-                alt="Logo de Martine Cassar"
+                alt="Martine Cassar Ceramiste"
             />
         </RouterLink>
 

@@ -1,5 +1,6 @@
 :root {
     font-family: "Montserrat", sans-serif;
+    font-display: swap;
     font-weight: 400;
     color: var(--color-black);
 }
