@@ -19,24 +19,33 @@
                 :key="index"
                 :href="image.src"
                 target="_blank"
-                class="home-gallery__image-wrapper"
+                class="home-gallery__image-container"
             >
-                <img
-                    :key="index"
-                    :src="image.tinySrc"
-                    :alt="image.alt"
-                    :loading="index > 0 ? 'lazy' : 'eager'"
-                    class="home-gallery__image"
-                    :class="'js-tiny-image-' + index"
-                />
-                <img
-                    :key="index"
-                    :src="image.src"
-                    :alt="image.alt"
-                    :loading="index > 0 ? 'lazy' : 'eager'"
-                    class="home-gallery__image"
-                    @load="hideTinyImage(index)"
-                />
+                <div class="home-gallery__image-wrapper">
+                    <img
+                        :key="index"
+                        :src="image.tinySrc"
+                        :alt="image.alt"
+                        :loading="
+                            index > 0 ? 'lazy' : 'eager'
+                        "
+                        class="home-gallery__image home-gallery__image--thumbnail"
+                        :class="'js-tiny-image-' + index"
+                    />
+                </div>
+
+                <div class="home-gallery__image-wrapper">
+                    <img
+                        :key="index"
+                        :src="image.src"
+                        :alt="image.alt"
+                        :loading="
+                            index > 0 ? 'lazy' : 'eager'
+                        "
+                        class="home-gallery__image"
+                        @load="hideTinyImage(index)"
+                    />
+                </div>
             </a>
         </div>
     </div>
