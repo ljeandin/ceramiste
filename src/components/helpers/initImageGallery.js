@@ -16,6 +16,8 @@ export default async function initImageGallery(
         title: row.image_title,
         description: row.image_description,
         alt: row.image_alt,
+        width: row.image_width,
+        height: row.image_height,
     }));
 
     return {

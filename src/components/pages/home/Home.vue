@@ -23,10 +23,12 @@
                 <img
                     :key="index"
                     :src="image.src"
-                    :data-alt="image.alt"
+                    :alt="image.alt"
                     :loading="index > 0 ? 'lazy' : 'eager'"
                     class="home-gallery__image"
                     :style="`background: url('${image.tinySrc}')`"
+                    :width="image.width"
+                    :height="image.height"
                 />
             </a>
         </div>
