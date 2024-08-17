@@ -41,8 +41,8 @@
         100% - var(--header-height) -
             calc(12 * var(--spacing))
     );
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     transition: border-radius var(--transition-duration);
 }
