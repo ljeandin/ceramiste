@@ -1,7 +1,13 @@
 <script setup>
+    import { onMounted, ref } from "vue";
     import initImageGallery from "../../helpers/initImageGallery";
 
-    const { images } = initImageGallery("accueil");
+    const images = ref([]);
+
+    onMounted(async () => {
+        const gallery = await initImageGallery("accueil");
+        images.value = gallery.images.value;
+    });
 </script>
 
 <template>

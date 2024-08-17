@@ -1,11 +1,17 @@
 <script setup>
+    import { ref, onMounted } from "vue";
     import initImageGallery from "../../helpers/initImageGallery";
 
     const props = defineProps(["googleSheetName"]);
 
-    const { images } = initImageGallery(
-        props.googleSheetName
-    );
+    const images = ref([]);
+
+    onMounted(async () => {
+        const gallery = await initImageGallery(
+            props.googleSheetName
+        );
+        images.value = gallery.images.value;
+    });
 </script>
 
 <template>
