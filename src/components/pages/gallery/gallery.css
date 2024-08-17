@@ -6,6 +6,7 @@
 .gallery__image {
     display: block;
     width: 100%;
+    height: auto;
     margin-bottom: calc(2 * var(--spacing));
     transition: border-radius var(--transition-duration);
 }

@@ -30,6 +30,8 @@
                     class="gallery__image"
                     :loading="index > 0 ? 'lazy' : 'eager'"
                     :style="`background: url('${image.tinySrc}')`"
+                    :width="image.width"
+                    :height="image.height"
                 />
             </a>
         </div>
