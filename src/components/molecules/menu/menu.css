@@ -64,9 +64,8 @@
     transition: transform var(--transition-duration) ease-in;
     display: flex;
     gap: var(--spacing);
-    height: calc(6 * var(--spacing));
-    width: calc(6 * var(--spacing));
-    padding: var(--spacing);
+    height: calc(4 * var(--spacing));
+    width: calc(4 * var(--spacing));
 }
 
 .menu-trigger--open {
