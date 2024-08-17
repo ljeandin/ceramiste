@@ -28,6 +28,10 @@
                 <router-link
                     v-else
                     class="menu__link js-menu-link"
+                    :class="{
+                        'menu__link--active':
+                            $route.path === item.link,
+                    }"
                     :to="item.link"
                 >
                     {{ item.title }}
@@ -44,6 +48,11 @@
                         <router-link
                             class="menu__link"
                             :to="subItem.link"
+                            :class="{
+                                'menu__link--active':
+                                    $route.path ===
+                                    subItem.link,
+                            }"
                         >
                             {{ subItem.title }}
                         </router-link>

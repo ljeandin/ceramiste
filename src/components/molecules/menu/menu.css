@@ -35,7 +35,8 @@
     cursor: pointer;
 }
 
-.menu__link:hover {
+.menu__link:hover,
+.menu__link--active {
     box-shadow: 0 var(--stroke-thickness) var(--color-black);
 }
 
