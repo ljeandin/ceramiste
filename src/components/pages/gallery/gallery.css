@@ -1,6 +1,7 @@
 .gallery {
     padding: 0 calc(2 * var(--spacing));
     max-width: calc(125 * var(--spacing));
+    column-count: 2;
 }
 
 .gallery__image {
@@ -9,9 +10,6 @@
     height: auto;
     margin-bottom: calc(2 * var(--spacing));
     transition: border-radius var(--transition-duration);
-}
-
-.gallery__image:hover {
     border-radius: var(--border-radius);
 }
 
@@ -24,7 +22,20 @@
 @media (min-width: 768px) {
     .gallery {
         padding: 0 calc(6 * var(--spacing));
-        column-count: 2;
         column-gap: calc(2 * var(--spacing));
+    }
+
+    .gallery__image {
+        border-radius: 0;
+    }
+
+    .gallery__image:hover {
+        border-radius: var(--border-radius);
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery {
+        column-count: 3;
     }
 }
