@@ -1,5 +1,7 @@
 .gallery {
     padding: 0 calc(2 * var(--spacing));
+    /* width is necessary to not have cls on the page */
+    width: 100%;
     max-width: calc(125 * var(--spacing));
     column-count: 2;
 }
